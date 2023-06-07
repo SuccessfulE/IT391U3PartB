@@ -89,21 +89,33 @@ namespace IT391U3B
             myFriends.Add("Mary 520-788-3457");
 
             Console.WriteLine("The content of my friends list: ");
-            DisplayList(myFriends);
+            foreach (var item in myFriends)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine();
 
             myFriends.Sort(); //sort the friends list
 
             Console.WriteLine("Sorted friends List: ");
-            DisplayList(myFriends);
+            foreach (var item in myFriends)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine();
 
             myFriends.RemoveAt(1);//remove bill from sorted list
             myFriends.RemoveAt(0); //remove first friend from sorted list
             myFriends.RemoveAt(myFriends.Count() - 1);//remove last friend from sorted list
 
+            myFriends[3] = "Mary 520-897-4567"; // Updating Mary's phone number
+
+            
             Console.WriteLine("The updated contents of my friends list: ");
-            DisplayList(myFriends);
+            foreach (var item in myFriends)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine();
 
             Console.Write("The number of friends in my list is: " + myFriends.Count + "\n");
